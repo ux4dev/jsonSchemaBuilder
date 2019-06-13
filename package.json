@@ -1,5 +1,5 @@
 {
-  "name": "jsonschemabuilder",
+  "name": "ux4jsonschemabuilder",
   "version": "1.0.0",
   "description": "A very basic generator to create a JSON Schema from a JSON file",
   "main": "index.js",
