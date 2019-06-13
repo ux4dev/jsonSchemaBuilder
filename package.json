@@ -1,0 +1,14 @@
+{
+  "name": "jsonschemabuilder",
+  "version": "1.0.0",
+  "description": "A very basic generator to create a JSON Schema from a JSON file",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "jsonschema"
+  ],
+  "author": "Chris Exon",
+  "license": "ISC"
+}
