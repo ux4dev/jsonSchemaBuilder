@@ -10,5 +10,8 @@
     "jsonschema"
   ],
   "author": "Chris Exon",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "sentence-case": "^2.1.1"
+  }
 }

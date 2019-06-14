@@ -1,3 +1,5 @@
+const sentenceCase = require('sentence-case');
+
 
 function isPlainObject(obj) {
     return obj ? typeof obj === 'object' && Object.getPrototypeOf(obj) === Object.prototype : false;
@@ -36,7 +38,7 @@ function handleSchema(json, schema) {
 
 function handleArray(name, arr, schema, opts) {
     schema.type = 'array';
-    if (opts.title) schema.title = name || "";
+    if (opts.title) schema.title = sentenceCase(name) || "";
     if (opts.description) schema.description = "";
     var props = schema.items = {};
     parse("", arr[0], props, opts)
@@ -47,7 +49,7 @@ function handleObject(name, json, schema, opts) {
         return handleSchema(json, schema)
     }
     schema.type = 'object';
-    if (opts.title) schema.title = name || "";
+    if (opts.title) schema.title = sentenceCase(name) || "";
     if (opts.description) schema.description = "";
     schema.required = [];
     var props = schema.properties = {};
@@ -72,7 +74,7 @@ function parse(name, json, schema, opts) {
         handleObject(name, json, schema, opts)
     } else {
         schema.type = getType(json)
-        if (opts.title) schema.title = name || "";
+        if (opts.title) schema.title = sentenceCase(name) || "";
         if (opts.description) schema.description = "";
     }
 }
